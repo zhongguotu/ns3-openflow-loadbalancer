@@ -11,3 +11,10 @@
 *.lai
 *.la
 *.a
+
+# Emacs Backup
+*~
+
+# LaTeX Auxillary
+*.aux
+doc/*.log

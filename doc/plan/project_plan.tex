@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{center}
+{\LARGE\@title} % Increase the font size of the title
+\end{center}
+
+\begin{flushright} % Right align
+\vspace{40pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\vspace{10pt}
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{The Simulation of an OpenFlow Load-Balancer}} % Title
+
+\author{\textsc{Haochen Wu, Bo Wu\\Yixin Zhao, Wei Fang}} % Author
+
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+\section*{Introduction}
+With the emergence of Software-Defined Networking(SDN), many problems can be handled by a non-dedicated way, which could significantly reduce the cost.
+One good example is using an OpenFlow switch to do the load-balancing. Recently it begins to go wild in the industry.
+There are many ways to balance the load using OpenFlow switch and we are trying to compare the performance of different methods.
+The ability enabled by ns-3 to set the network topology and corresponding parameters of hosts and links makes it suitable for exploring this problem.
+We will use latency, throughput and server's load as indicators of the performance.
+
+The main works to be done in our project include:
+
+\begin{enumerate}
+\item Using ns-3 to create proper network topology.
+\item Writing the program running on the OpenFlow controller.
+\item Running the simulation and compare the performance under different circumstances.
+\end{enumerate}
+
+\section*{Schedule}
+
+\begin{tabular}{ll}
+\hline
+\textbf{Time} & \textbf{Work}\\
+\hline
+\textbf{Oct.21-Oct.27:} & Learn NS-3 and go through some examples. \\
+\textbf{Oct.28-Nov.3:} & Learn OpenFlow and study the corresponding part.\\
+\textbf{Nov.4-Nov.10:} & Create network topology and write the controller.\\
+\textbf{Nov.11-Nov.17:} & Debug and make improvement.\\
+\textbf{Nov.18-Nov.24:} & Run simulation and collect data.\\
+\textbf{Nov.25-Dec.1:} & Processing data.\\
+\textbf{Dec.2-Dec.8:} & File the report.\\
+\hline
+\end{tabular}
+
+\end{document}
